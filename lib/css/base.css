@@ -1,0 +1,367 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    transition: all .5s linear;
+}
+
+ul, ol, li {
+    list-style: none;
+    padding-left: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #650107;
+    text-decoration: none;
+}
+
+a:active,a:focus,a:hover, button:hover{
+    text-decoration: none;
+    outline: 0;
+    color: #FE616B;
+}
+
+input[type="password"] {
+    font-family: caption;
+    font-size: 38px;
+}
+
+input[type="password"]:focus::placeholder {
+    color: transparent;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input:focus::-webkit-input-placeholder {
+    color:transparent;
+}
+
+input:focus-visible {
+    outline: 1px solid #F2F2F2;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 3%);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+a,a:hover, button:hover {
+    /* -webkit-transition:all .3s ease;
+    -o-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    transition:all .3s ease; */
+    text-decoration: none;
+}
+
+::placeholder {
+    color: #650107DE;
+}
+
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+button:focus, button:focus-visible {
+    border: 1px solid #E8E8E8;
+    outline: none;
+}
+
+label {
+    display: block;
+}
+
+.row {
+    margin: 0 -12px;
+}
+
+.col {
+    padding: 0 12px;
+}
+
+/* Modal recharge */
+.modal-recharge__money {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    padding: 0 12px;
+    background: rgb(0 0 0 / 44%);
+    animation: modalFaceIn linear .4s;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.modal-recharge {
+    background-color: #fff;
+    max-width: 628px;
+    width: 100%;
+    border-radius: 24px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.md-recharge__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.md-recharge__heading {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.024em;
+    color: rgba(101, 1, 7, 0.87);
+    margin: 0;
+}
+
+.recharge-list {
+    padding: 0 24px 40px;
+}
+
+.recharge-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.recharge-item:last-child {
+    border: none;
+}
+
+.recharge-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.recharge-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    padding: 16px 0 16px;
+}
+
+.recharge-heading {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.012em;
+    color: rgba(101, 1, 7, 0.87);
+    margin-bottom: 3px;
+}
+
+.recharge-title {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.012em;
+    color: rgba(101, 1, 7, 0.6);
+}
+
+.rent:hover, .donate:hover, .message:hover {
+    color: #fff;
+    box-shadow: 0px 6px 24px rgb(254 97 107 / 16%);
+    background: linear-gradient(180deg, #FE858D 0%, #FE616B 100%);
+    transition: all .5s;
+}
+
+
+/* Zoom image CSS */
+.img-popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: none;
+    z-index: 9999999999999;
+    animation: pop-in;
+    animation-duration: 0.5s;
+    -webkit-animation: pop-in 0.5s;
+    -moz-animation: pop-in 0.5s;
+    -ms-animation: pop-in 0.5s;
+}
+
+.img-popup img {
+    position: absolute;
+    top: 50%;
+    max-width: 80%;
+    max-height: 80vh;
+    width: 1024px;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 15px;
+    right: 5%;
+    padding: 0px 18px;
+    color: #fff;
+    font-size: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.lightboxfadeout{
+    animation: fadeout;
+    animation-duration: 0.5s;
+    -webkit-animation: fadeout 0.5s;
+    -moz-animation: fadeout 0.5s;
+    -ms-animation: fadeout 0.5s;
+}
+
+
+/* Key frame */
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes pop-in {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes pop-in {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: scale(1);
+    }
+}
+
+
+@keyframes fadeout {
+    100% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes fadeout {
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+    }
+
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes fadeout {
+    100% {
+        opacity: 0;
+        -moz-transform: scale(0.1);
+    }
+
+    0% {
+        opacity: 1;
+        -moz-transform: scale(1);
+    }
+}
+
+/* Làm cho kéo trục toast vào trái */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes navbarNotiGrowth {
+    from {
+        opacity: 0;
+        /* độ lớn lên phóng to thu nhỏ của nó */
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Key frame */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* tạo ra chuyển động liên tiếp của modal*/
+@keyframes modalFaceIn {
+    from {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
